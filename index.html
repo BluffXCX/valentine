@@ -36,17 +36,19 @@
     document.getElementById("yesBtn").addEventListener("click", () => {
       const msg = document.createElement("div");
       msg.className = "popup";
-      msg.innerText = "Yay Gabbi! ❤️ You’re my Valentine!";
+      msg.innerText = "Yay Gabbi! ❤️ You’re my Valentine! I love you.";
       document.body.appendChild(msg);
       setTimeout(() => msg.remove(), 4000);
     });
 
-    // No button dodges away
+    // No button dodges but stays on screen
     const noBtn = document.getElementById("noBtn");
     noBtn.addEventListener("mouseover", () => {
-      const padding = 50;
-      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - padding);
-      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - padding);
+      const padding = 20; // margin from edges
+      const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+      const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+      const x = Math.floor(Math.random() * maxX);
+      const y = Math.floor(Math.random() * maxY);
       noBtn.style.position = "absolute";
       noBtn.style.left = x + "px";
       noBtn.style.top = y + "px";
