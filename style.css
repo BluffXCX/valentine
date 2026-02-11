@@ -54,8 +54,8 @@ button:hover {
 /* Resized image (double size: 300x300) */
 .valentine-img {
   margin-top: 30px;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 600px;
+  max-height: 600px;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   animation: fadeIn 3s ease-in-out;
@@ -146,4 +146,5 @@ button:hover {
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
+
 
