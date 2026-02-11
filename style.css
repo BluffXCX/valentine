@@ -51,11 +51,11 @@ button:hover {
   background: gray;
 }
 
-/* Resized and centered image */
+/* Resized image (double size: 300x300) */
 .valentine-img {
   margin-top: 30px;
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 300px;
+  max-height: 300px;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   animation: fadeIn 3s ease-in-out;
@@ -131,7 +131,7 @@ button:hover {
   border-radius: 15px;
   font-size: 22px;
   animation: fadeInOut 4s ease forwards;
-  z-index: 100; /* ensures popup is above the image */
+  z-index: 100; /* ensures popup is above image */
 }
 
 @keyframes fadeInOut {
