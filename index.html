@@ -13,7 +13,7 @@
       <button id="yesBtn">Yes</button>
       <button id="noBtn">No</button>
     </div>
-    <!-- Resized and centered image -->
+    <!-- Resized image -->
     <img src="3.png" alt="Valentine Image" class="valentine-img">
   </div>
 
@@ -27,4 +27,31 @@
       heart.className = "heart";
       heart.style.left = Math.random() * 100 + "vw";
       heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.querySelector(".hearts").appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 400);
+
+    // Yes button popup
+    document.getElementById("yesBtn").addEventListener("click", () => {
+      const msg = document.createElement("div");
+      msg.className = "popup";
+      msg.innerText = "Yay Gabbi! ❤️ You’re my Valentine!";
+      document.body.appendChild(msg);
+      setTimeout(() => msg.remove(), 4000);
+    });
+
+    // No button dodges away
+    const noBtn = document.getElementById("noBtn");
+    noBtn.addEventListener("mouseover", () => {
+      const padding = 50;
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - padding);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - padding);
+      noBtn.style.position = "absolute";
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+  </script>
+</body>
+</html>
 
